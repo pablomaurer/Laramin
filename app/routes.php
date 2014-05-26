@@ -54,5 +54,5 @@ Menu::make('loginNav', function($menu){
         if($item->meta('loggedIn')) {
             return Sentry::check();
         }
-        return true;
+        return !Sentry::check();
     });
