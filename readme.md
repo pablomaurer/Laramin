@@ -2,7 +2,11 @@
 A Laravel starter Set (No Package) 
 
 ### Important
-The File app/config/database isn't included, so get it from the official Laravel repository. Because everybody has other database settings.
+Missing Files:
+* app/config/database.php
+* app/config/mail.php
+
+Get them from Official Laravel Repository. Because these are individual settings with sensitive informations.
 
 ### used Packages
 
