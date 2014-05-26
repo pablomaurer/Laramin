@@ -15,7 +15,6 @@ Route::post('user/register', array('as' => 'register', 'uses' => 'AuthController
 
 //Confirm
 Route::get('user/confirm', array('as' => 'confirm', 'uses' => 'AuthController@getConfirm'));
-Route::post('user/confirm', array('as' => 'confirm', 'uses' => 'AuthController@postConfirm'));
 
 // Reset
 Route::get('user/reset', 'AuthController@getReset');

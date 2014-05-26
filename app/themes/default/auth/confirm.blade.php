@@ -9,16 +9,18 @@
             <div class="panel-heading"><h3 class="panel-title"><strong>{{ trans('login.confirmTitle') }}</strong></h3></div>
             <div class="panel-body">
 
-                {{ Form::open(array('route' => 'confirm')) }}
+                {{ Form::open(array('route' => 'confirm', 'method' => 'get')) }}
                 <form class="" role="form">
 
                     <div class="form-group">
-                        <label for="code">{{ trans('login.confirmCode') }}</label>
+                        <label for="activationCode">{{ trans('login.confirmCode') }}</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span> <?php //todo Prio design: change confirm code icon ?>
-                            <input type="code" id="code" name="code" class="form-control" placeholder="{{ trans('login.confirmCode') }}" required autofocus>
+                            <input type="activationCode" id="activationCode" name="activationCode" class="form-control" placeholder="{{ trans('login.confirmCode') }}" required autofocus>
                         </div>
                     </div>
+
+                    <button type="submit" class="btn btn-primary">{{ trans('login.register') }}</button> <?php //todo translate ?>
 
                     <hr>
 

@@ -29,6 +29,7 @@ return array(
     "confirmTitle"      => "Registrierung bestätigen",
     "confirmCode"       => "Bestätigungs Code",
     "confirmInfo"       => "Bestätigungs möglichkeiten: <ol><li>Geben Sie den Bestätigungscode den Sie per Mail erhalten haben ein</li><li>Klicken Sie auf den Link im Email!</li>",
+    "confirmMailTitle"  => "Bitte Bestätigen Sie die Registrierung!",  //todo Prio Low: mail subject with name of website
 
     "between"              => array(
         "numeric" => "The :attribute must be between :min and :max.",
