@@ -11,7 +11,7 @@ used:
 * [themify](https://github.com/mpedrera/themify) - for managing Themes
 * [widget](https://github.com/gravitano/widget) - for making theme widgets
 * [laravel-modules](https://github.com/creolab/laravel-modules) - for cleaner structure 
-* [laravel-menu](https://github.com/lavary/laravel-menu) - for managing menus
+* [laravel-menu](https://github.com/lavary/laravel-menu) - for managing menus (great guy)
 * [Ardent](https://github.com/laravelbook/ardent) - for validating
 
 Maybe later:
