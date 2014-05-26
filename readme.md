@@ -7,15 +7,15 @@ The File app/config/database isn't included, so get it from the official Laravel
 ### used Packages
 
 used:
-* Authentication: [Sentry](https://github.com/cartalyst/sentry)
-* Theme Manager: [themify](https://github.com/mpedrera/themify)
-* Widgets: [widget](https://github.com/gravitano/widget)
-* Modules: [laravel-modules](https://github.com/creolab/laravel-modules)
-* Menu Manager: [laravel-menu](https://github.com/lavary/laravel-menu)
-* Validator: [Ardent](https://github.com/laravelbook/ardent)
+* [Sentry](https://github.com/cartalyst/sentry) - for Authenticatoin
+* [themify](https://github.com/mpedrera/themify) - for managing Themes
+* [widget](https://github.com/gravitano/widget) - for making theme widgets
+* [laravel-modules](https://github.com/creolab/laravel-modules) - for cleaner structure 
+* [laravel-menu](https://github.com/lavary/laravel-menu) - for managing menus
+* [Ardent](https://github.com/laravelbook/ardent) - for validating
 
 Maybe later:
-* Notification: [notification](https://github.com/edvinaskrucas/notification)
+* [notification](https://github.com/edvinaskrucas/notification) - for creating notifications
 
 ### usage
 1.model
