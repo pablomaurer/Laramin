@@ -1,0 +1,1 @@
+@include(Config::get('laravel-menu::bootstrap-navbar-items'), array('items' => $navbar->roots()))
