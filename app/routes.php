@@ -40,19 +40,15 @@ Menu::make('mainNav', function($menu){
 
 
 Menu::make('loginNav', function($menu){
+    if (Sentry::check()) {
+        $user = Sentry::getUser();
 
-    $menu->add(trans('login.login'), array('route'  => 'login'))
-            ->meta('loggedIn', false);
-    $menu->add(trans('login.register'), array('route'  => 'register'))
-            ->meta('loggedIn', false);
-    $menu->add(trans('login.logout'), array('route' => 'logout'))
-            ->meta('loggedIn', true);
-    $menu->add('Name', 'services')
-            ->meta('loggedIn', true);
-
-})->filter(function($item) {
-        if($item->meta('loggedIn')) {
-            return Sentry::check();
-        }
-        return !Sentry::check();
-    });
+        $menu->add(trans('login.logout'), array('route' => 'logout'));
+        $menu->add($user->email, 'services');
+    }
+    else
+    {
+    $menu->add(trans('login.login'), array('route'  => 'login'));
+    $menu->add(trans('login.register'), array('route'  => 'register'));
+    }
+});
