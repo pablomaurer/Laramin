@@ -18,6 +18,8 @@ used:
 * [laravel-menu](https://github.com/lavary/laravel-menu) - for managing menus (great guy)
 * [Ardent](https://github.com/laravelbook/ardent) - for validating
 * [todo](#) - IDE helper for code Completion, alot easyier to work like this... 
+ 
+
 Maybe later:
 * [notification](https://github.com/edvinaskrucas/notification) - for creating notifications
 
