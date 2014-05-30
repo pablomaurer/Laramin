@@ -17,7 +17,14 @@ Route::post('user/register', array('as' => 'register', 'uses' => 'AuthController
 Route::get('user/confirm', array('as' => 'confirm', 'uses' => 'AuthController@getConfirm'));
 
 // Reset
-Route::get('user/reset', 'AuthController@getReset');
+Route::get('user/reset', array('as' => 'reset', 'uses' => 'AuthController@getResetCode'));
+Route::post('user/reset', array('as' => 'reset', 'uses' => 'AuthController@postResetCode'));
+
+Route::get('user/confirmreset', array('as' => 'confirmReset', 'uses' => 'AuthController@getConfirmResetCode'));
+
+Route::get('user/newpassword', array('as' => 'newPassword', 'uses' => 'AuthController@getSetNewPassword'));
+Route::post('user/newpassword', array('as' => 'newPassword', 'uses' => 'AuthController@postSetNewPassword'));
+
 
 // Tests
 Route::get('test', 'AuthController@showAdmin');

@@ -1,5 +1,3 @@
-You're Confirmation Code:
-
 <h1>Hello {{ $email }}!</h1>
 <h2>Please Activate your Account</h2>
 

@@ -14,5 +14,5 @@ return array(
     */
 
     "or"                   => "oder",
-    "remember"             => "Passwort merken",
+    "save"                 => "Speichern",
 );

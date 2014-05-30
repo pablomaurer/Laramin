@@ -37,7 +37,7 @@
                 <hr>
 
                 <div class="form-group">
-                    <a href="#"> {{ trans('login.forgot') }}</a> <?php //todo route forgot ?>
+                    <a href="{{ route('reset') }}"> {{ trans('login.forgot') }}</a> <?php //todo route forgot ?>
                 </div>
 
             </form>
