@@ -125,6 +125,7 @@ return array(
         'Lavary\Menu\ServiceProvider',
         'Pingpong\Widget\WidgetServiceProvider',
         'Mpedrera\Themify\ThemifyServiceProvider',
+        'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 	),
 
 	/*
