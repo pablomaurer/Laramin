@@ -126,6 +126,7 @@ return array(
         'Pingpong\Widget\WidgetServiceProvider',
         'Mpedrera\Themify\ThemifyServiceProvider',
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'Krucas\Notification\NotificationServiceProvider'
 	),
 
 	/*
@@ -195,6 +196,7 @@ return array(
         'Former'          => 'Former\Facades\Former',
         'Menu'            => 'Lavary\Menu\Facade',
         'Themify'         => 'Mpedrera\Themify\Facades\Themify',
+        'Notification' => 'Krucas\Notification\Facades\Notification'
 	),
 
 );

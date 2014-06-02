@@ -12,7 +12,8 @@
         "lavary/laravel-menu": "dev-master",
         "pingpong/widget": "1.0.*",
         "mpedrera/themify": "dev-master",
-        "barryvdh/laravel-ide-helper": "1.*"
+        "barryvdh/laravel-ide-helper": "1.*",
+        "edvinaskrucas/notification": "2.*"
     },
 	"autoload": {
 		"classmap": [
