@@ -23,9 +23,10 @@
 
             <!-- Menu Right -->
             <ul class="nav navbar-nav navbar-right">
+                <li id="loadingImg"><img id="s" style=" float: right; padding-top: 15px; padding-bottom: 15px;" src="{{ URL::asset("lib/img/ajax-loader.gif") }}" /></li>
                 {{-- replaced $loginNav->asBootstrap() --}}
                 @include('packages.lavary.laravel-menu.bootstrap-navbar-items', array('items' => $loginNav->roots()))
-                <ul class="nav navbar-nav">
+            </ul>
 
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

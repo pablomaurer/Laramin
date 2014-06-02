@@ -19,6 +19,7 @@
 
     <!-- Content -->
     <section>
+        <div id="msgBag">{{ Notification::showAll() }}</div>
         @yield('content')
     </section>
 
