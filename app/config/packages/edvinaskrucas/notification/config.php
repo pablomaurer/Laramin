@@ -37,7 +37,10 @@ return array(
     */
     'default_format'                        => array(
 
-        'default'               => '<div class="alert alert-:type">:message</div>',
+        'default'               => '<div class="alert alert-dismissable fade in alert-:type">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                        :message
+                                    </div>',
 
     ),
 
@@ -79,7 +82,7 @@ return array(
     */
     'default_types'                         => array(
 
-        'default'               => array('info', 'success', 'warning', 'error'),
+        'default'               => array('info', 'success', 'warning', 'danger'),
 
     ),
 

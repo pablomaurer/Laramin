@@ -730,12 +730,12 @@ namespace {
 		 * @param string               $abstract
 		 * @param Closure|string|null  $concrete
 		 * @param bool                 $shared
-		 * @return bool
+		 * @return void
 		 * @static 
 		 */
 		 public static function bindIf($abstract, $concrete = null, $shared = false){
 			//Method inherited from \Illuminate\Container\Container
-			return \Illuminate\Foundation\Application::bindIf($abstract, $concrete, $shared);
+			 \Illuminate\Foundation\Application::bindIf($abstract, $concrete, $shared);
 		 }
 
 		/**
@@ -4901,13 +4901,13 @@ namespace {
 		/**
 		 * Retrieve the "count" result of the query.
 		 *
-		 * @param string  $column
+		 * @param string  $columns
 		 * @return int
 		 * @static 
 		 */
-		 public static function count($column = '*'){
+		 public static function count($columns = '*'){
 			//Method inherited from \Illuminate\Database\Query\Builder
-			return \Illuminate\Database\Query\Builder::count($column);
+			return \Illuminate\Database\Query\Builder::count($columns);
 		 }
 
 		/**
@@ -5835,12 +5835,13 @@ namespace {
 		 * @param string  $name
 		 * @param string  $selected
 		 * @param array   $options
+		 * @param string  $format
 		 * @return string
 		 * @static 
 		 */
-		 public static function selectMonth($name, $selected = null, $options = array()){
+		 public static function selectMonth($name, $selected = null, $options = array(), $format = '%B'){
 			//Method inherited from \Illuminate\Html\FormBuilder
-			return \Illuminate\Html\FormBuilder::selectMonth($name, $selected, $options);
+			return \Illuminate\Html\FormBuilder::selectMonth($name, $selected, $options, $format);
 		 }
 
 		/**
@@ -11052,6 +11053,18 @@ namespace {
 		 }
 
 		/**
+		 * Alias for the "currentRouteNamed" method.
+		 *
+		 * @param dynamic  string
+		 * @return bool
+		 * @static 
+		 */
+		 public static function is(){
+			//Method inherited from \Illuminate\Routing\Router
+			return \Illuminate\Routing\Router::is();
+		 }
+
+		/**
 		 * Determine if the current route matches a given name.
 		 *
 		 * @param string  $name
@@ -11072,6 +11085,18 @@ namespace {
 		 public static function currentRouteAction(){
 			//Method inherited from \Illuminate\Routing\Router
 			return \Illuminate\Routing\Router::currentRouteAction();
+		 }
+
+		/**
+		 * Alias for the "currentRouteUses" method.
+		 *
+		 * @param dynamic  string
+		 * @return bool
+		 * @static 
+		 */
+		 public static function isAction(){
+			//Method inherited from \Illuminate\Routing\Router
+			return \Illuminate\Routing\Router::isAction();
 		 }
 
 		/**
@@ -13683,6 +13708,220 @@ namespace {
 		 public static function assetsPath(){
 			//Method inherited from \Mpedrera\Themify\Themify
 			return \Mpedrera\Themify\Themify::assetsPath();
+		 }
+
+	}
+	class Notification extends \Krucas\Notification\Facades\Notification{
+		/**
+		 * Create new instance.
+		 *
+		 * @param string $container
+		 * @param array $types
+		 * @param array $format
+		 * @param array $formats
+		 * @static 
+		 */
+		 public static function __construct($container = 'default', $types = array(), $format = array(), $formats = array()){
+			//Method inherited from \Krucas\Notification\Notification
+			 \Krucas\Notification\Notification::__construct($container, $types, $format, $formats);
+		 }
+
+		/**
+		 * Return name of default container.
+		 *
+		 * @return string
+		 * @static 
+		 */
+		 public static function getDefaultContainerName(){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::getDefaultContainerName();
+		 }
+
+		/**
+		 * Set types for a container.
+		 *
+		 * @param $container
+		 * @param array $types
+		 * @return \Krucas\Notification\Notification
+		 * @static 
+		 */
+		 public static function setContainerTypes($container, $types = array()){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::setContainerTypes($container, $types);
+		 }
+
+		/**
+		 * Return types for a container.
+		 *
+		 * @param $container
+		 * @return array
+		 * @static 
+		 */
+		 public static function getContainerTypes($container){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::getContainerTypes($container);
+		 }
+
+		/**
+		 * Set format for a container.
+		 *
+		 * @param $container
+		 * @param null $format
+		 * @return \Krucas\Notification\Notification
+		 * @static 
+		 */
+		 public static function setContainerFormat($container, $format = null){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::setContainerFormat($container, $format);
+		 }
+
+		/**
+		 * Return format for a container.
+		 *
+		 * @param $container
+		 * @return string|null
+		 * @static 
+		 */
+		 public static function getContainerFormat($container){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::getContainerFormat($container);
+		 }
+
+		/**
+		 * Set formats for a container.
+		 *
+		 * @param $container
+		 * @param array $formats
+		 * @return \Krucas\Notification\Notification
+		 * @static 
+		 */
+		 public static function setContainerFormats($container, $formats = array()){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::setContainerFormats($container, $formats);
+		 }
+
+		/**
+		 * Return formats for a container.
+		 *
+		 * @param $container
+		 * @return array
+		 * @static 
+		 */
+		 public static function getContainerFormats($container){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::getContainerFormats($container);
+		 }
+
+		/**
+		 * Add new container.
+		 *
+		 * @param $container
+		 * @param array $types
+		 * @param null $defaultFormat
+		 * @param array $formats
+		 * @return \Krucas\Notification\Notification
+		 * @static 
+		 */
+		 public static function addContainer($container, $types = array(), $defaultFormat = null, $formats = array()){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::addContainer($container, $types, $defaultFormat, $formats);
+		 }
+
+		/**
+		 * Return array of available containers.
+		 *
+		 * @return array
+		 * @static 
+		 */
+		 public static function getContainers(){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::getContainers();
+		 }
+
+		/**
+		 * Returns container instance.
+		 *
+		 * @param null $container
+		 * @param callable $callback
+		 * @return mixed
+		 * @static 
+		 */
+		 public static function container($container = null, $callback = null){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::container($container, $callback);
+		 }
+
+		/**
+		 * Create new message instance.
+		 *
+		 * @param null $message
+		 * @return \Krucas\Notification\Message
+		 * @static 
+		 */
+		 public static function message($message = null){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::message($message);
+		 }
+
+		/**
+		 * Fire given event.
+		 *
+		 * @param $event
+		 * @param \Krucas\Notification\NotificationsBag $notificationBag
+		 * @param \Krucas\Notification\Message $message
+		 * @return array|bool|null
+		 * @static 
+		 */
+		 public static function fire($event, $notificationBag, $message){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::fire($event, $notificationBag, $message);
+		 }
+
+		/**
+		 * Get the event dispatcher instance.
+		 *
+		 * @return \Illuminate\Events\Dispatcher
+		 * @static 
+		 */
+		 public static function getEventDispatcher(){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::getEventDispatcher();
+		 }
+
+		/**
+		 * Set the event dispatcher instance.
+		 *
+		 * @param \Illuminate\Events\Dispatcher $dispatcher
+		 * @return void
+		 * @static 
+		 */
+		 public static function setEventDispatcher($dispatcher){
+			//Method inherited from \Krucas\Notification\Notification
+			 \Krucas\Notification\Notification::setEventDispatcher($dispatcher);
+		 }
+
+		/**
+		 * Unset the event dispatcher for models.
+		 *
+		 * @return void
+		 * @static 
+		 */
+		 public static function unsetEventDispatcher(){
+			//Method inherited from \Krucas\Notification\Notification
+			 \Krucas\Notification\Notification::unsetEventDispatcher();
+		 }
+
+		/**
+		 * Calls NotificationBag function for a default container.
+		 *
+		 * @param $name
+		 * @param $arguments
+		 * @return \Krucas\Notification\NotificationBag|null
+		 * @static 
+		 */
+		 public static function __call($name, $arguments){
+			//Method inherited from \Krucas\Notification\Notification
+			return \Krucas\Notification\Notification::__call($name, $arguments);
 		 }
 
 	}
