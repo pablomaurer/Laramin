@@ -9,8 +9,8 @@
         <div class="panel-heading"><h3 class="panel-title"><strong>{{ trans('login.loginTitle') }}</strong></h3></div>
         <div class="panel-body">
 
-            {{ Form::open(array('route' => 'login')) }}
-            <form class="" role="form">
+            {{-- Form::open(array('route' => 'login', 'id' => 'loginForm')) --}}
+            <form id="loginForm" role="form" method="post">
 
                 <div class="form-group">
                     <label for="mail">{{ trans('login.email') }}</label>
@@ -41,7 +41,7 @@
                 </div>
 
             </form>
-            {{ Form::close() }}
+            {{-- Form::close() --}}
 
         </div>
     </div>

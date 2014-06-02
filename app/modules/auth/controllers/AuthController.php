@@ -1,5 +1,7 @@
 <?php
 
+// Todo: ------------------ change all request and forms to ajax
+
 class AuthController extends Controller {
 
     // Login
@@ -19,26 +21,27 @@ class AuthController extends Controller {
 
             $user = Sentry::authenticate($credentials, Input::get('remember'));
             return Redirect::route('dashboard'); //todo Prio Low: make as a setting
-        } //todo Prio Mid: create messages for exceptions
+        }
         catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
         {
-            echo 'Login field is required.';
+            Notification::danger('Login field is required.');
         }
         catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
         {
-            echo 'Password field is required.';
+            Notification::danger('Password field is required.');
         }
         catch (Cartalyst\Sentry\Users\WrongPasswordException $e)
         {
-            echo 'Wrong password, try again.';
+            Notification::danger('Wrong password, try again.');
         }
         catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
         {
-            echo 'User was not found.';
+            Notification::danger('User not found');
+            return Response::json(array('logged' => false));
         }
         catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
         {
-            echo 'User is not activated.';
+            Notification::danger('User is not activated.');
         }
     }
 
@@ -79,15 +82,15 @@ class AuthController extends Controller {
         }
         catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
         {
-            echo 'Login field is required.';
+            Notification::danger('Login field is required.');
         }
         catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
         {
-            echo 'Password field is required.';
+            Notification::danger('Password field is required.');
         }
         catch (Cartalyst\Sentry\Users\UserExistsException $e)
         {
-            echo 'User with this login already exists.';
+            Notification::danger('User with this login already exists.');
         }
     }
 
@@ -107,12 +110,12 @@ class AuthController extends Controller {
                 }
                 else
                 {
-                    echo "wrong activation code"; //todo fix exception handling
+                    Notification::danger('Wrong Activation Code');
                 }
             }
             catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
             {
-                echo 'User was not found.';
+                Notification::danger('User was not found.');
             }
         }
         return View::make('auth.confirm');
@@ -148,7 +151,7 @@ class AuthController extends Controller {
         }
         catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
         {
-            echo 'User was not found.';
+            Notification::danger('User was not found.');
         }
     }
 
@@ -166,12 +169,12 @@ class AuthController extends Controller {
                 }
                 else
                 {
-                    echo "wrong ResetCode"; //todo fix exception handling
+                    Notification::danger('wrong ResetCode');
                 }
             }
             catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
             {
-                echo 'User was not found.';
+                Notification::danger('User was not found.');
             }
         }
         return View::make('auth.confirmResetCode');
@@ -188,7 +191,7 @@ class AuthController extends Controller {
             }
             return View::make('auth.newPassword',array('resetCode' => $resetCode));
         } else {
-            echo "We didnt get the resetCode";
+            Notification::danger('We didnt get the resetCode.');
         }
     }
 
@@ -203,18 +206,12 @@ class AuthController extends Controller {
             }
             else
             {
-                echo "Password Reset failed";
+                Notification::danger('Password Reset failed');
             }
         }
         else
         {
-            echo "We didnt get the ResetCode or Password!";
+            Notification::danger('We didnt get the ResetCode or Password!');
         }
-    }
-
-    // Test
-    public function showAdmin()
-    {
-        return View::make('test');
     }
 }
