@@ -6,11 +6,10 @@
 <div class="container">
     <div class="col-md-4 col-md-offset-4">
         <div class="panel panel-default">
-            <div class="panel-heading"><h3 class="panel-title"><strong>{{ trans('login.resetTitle') }}</strong></h3></div>
+            <div class="panel-heading"><h3 class="panel-title"><strong>{{ trans('<login class="register"></login>Title') }}</strong></h3></div>
             <div class="panel-body">
 
-                {{ Form::open(array('route' => 'register')) }}
-                <form class="" role="form">
+                <form id="registrationForm" class="form" role="form" method="post">
 
                     <div class="form-group">
                         <label for="email">{{ trans('login.email') }}</label>
@@ -38,7 +37,6 @@
                     {{ trans('global.or') }} <a href="{{ route('login') }}">{{ trans('login.login') }}</a>
 
                 </form>
-                {{ Form::close() }}
 
             </div>
         </div>

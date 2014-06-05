@@ -10,21 +10,32 @@ $(document).ready(function()
         });
 
     // if click on submit in the form with id loginForm
-    $(document).on('submit', '#loginForm', function()
+    $(document).on('submit', '.form', function()
     {
         $.ajax({
             type: "POST",
             url: window.location.href.toString(),
-            data: $("#loginForm").serialize(),
+            data: $(".form").serialize(),
             dataType: "json",
             success: function() {
                 console.log("Success");
             }
-        }).always(function() {
-            $("#msgBag").load(window.location.href.toString() + " #msgBag"); //todo animation?
-        }).fail(function() {
-            alert("Ajax Error, please contact Website owner!");
+        }).done(function(result) {
+            if (result.url != null) {
+                window.location.href = result.url;
+            } else {
+                $("#msgBag").load(window.location.href.toString() + " #msgBag");
+            }
         });
+
+        /*
+         .always(function() {
+         $("#msgBag").load(window.location.href.toString() + " #msgBag"); //todo animation?
+         })
+         .fail(function() {
+            alert("Ajax Error, please contact Website owner!");
+         })
+        */
 
         //function(result) - if in controller - return Response::json(array('logged' => false));
         /*.done(function(result)

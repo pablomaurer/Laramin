@@ -20,7 +20,7 @@ class AuthController extends Controller {
             );
 
             $user = Sentry::authenticate($credentials, Input::get('remember'));
-            return Redirect::route('dashboard'); //todo Prio Low: make as a setting
+            return Response::json(array('url' => route("dashboard"))); //todo Prio Low: make as a setting
         }
         catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
         {
@@ -78,11 +78,11 @@ class AuthController extends Controller {
             });
 
             // After Sending the mail, redirect to the profileActivation Page
-            return Redirect::route('confirm');
+            return Response::json(array('url' => route("confirm")));
         }
         catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
         {
-            Notification::danger('Login field is required.');
+            Notification::danger('Mail Adress  is required.');
         }
         catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
         {
@@ -96,7 +96,7 @@ class AuthController extends Controller {
 
     // Confirm
     // only get, because if user click on confirmationLink in mail.. it cannot be post.
-    public function getConfirm()
+    public function getConfirm()  //todo ajjjjjjjjaaaaaxx -----------------------------------------------------------------xxxxxxxx
     {
         if (Input::has('activationCode'))
         {
