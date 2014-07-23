@@ -29,10 +29,27 @@ Maybe later:
 * create new empty database in PhpMyAdmin or console "create database xy"
 * Setup Setting in laramin/app/config database.php and mail.php
 * Run "php artisan mirgrate"
-* Open laramin at TODO
+* Open laramin at "localhost/laramin/public/user/login"
 
 ### Todos
 * Find a Ajax Notification Way
-* Find a Installation Way, cause it's not a package
-* Add database.php file with default Settings
 * Set Current Page
+* Create Filters
+
+### Menu
+Define you're Menu in app/routes.php
+
+### Modules
+* Split you're Application in parts, they go in the app/modules/xy folder
+* Add a module.json file, or copy it from an existing one
+* create a routes.php
+* create a folder "controllers" with YourController.php
+
+### Views
+Normally Views are in app/views but because i thing almost everyone should have a cool
+Templating system to easy switch out the Views they have to go in "app/themes/default/"
+these are at a higher priority than at "app/views" but you dont have to use my themes folder
+but if you do, it will just work.
+
+### Widgets
+If you have stuff that should be available in all Views ... TODO
