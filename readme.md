@@ -1,12 +1,5 @@
 ## Laramin
-A Laravel starter Set (No Package) 
-
-### Important
-Missing Files:
-* app/config/database.php
-* app/config/mail.php
-
-Get them from Official Laravel Repository. Because these are individual settings with sensitive informations.
+A Laravel starter Set (No Package)
 
 ### used Packages
 
@@ -18,7 +11,6 @@ used:
 * [laravel-menu](https://github.com/lavary/laravel-menu) - for managing menus (great guy)
 * [Ardent](https://github.com/laravelbook/ardent) - for validating
 * [todo](#) - IDE helper for code Completion, alot easyier to work like this... 
- 
 
 Maybe later:
 * [notification](https://github.com/edvinaskrucas/notification) - for creating notifications
@@ -31,7 +23,13 @@ Maybe later:
 6.view ->title etc..
 
 ### Installation
-Todo find a way...beceaus it's not a package
+* Git clone
+* Install Composer
+* Run Composer update
+* create new empty database in PhpMyAdmin or console "create database xy"
+* Setup Setting in laramin/app/config database.php and mail.php
+* Run "php artisan mirgrate"
+* Open laramin at TODO
 
 ### Todos
 * Find a Ajax Notification Way
