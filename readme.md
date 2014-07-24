@@ -1,5 +1,5 @@
 ## Laramin
-A Laravel starter Set (No Package)
+A Laravel starter Set Backend and Frontend (No Package)
 
 ### used Packages
 
@@ -30,6 +30,7 @@ Maybe later:
 * create new empty database in PhpMyAdmin or console "create database xy"
 * Setup Setting in laramin/app/config database.php and mail.php
 * Run "php artisan mirgrate"
+* Run "php artisan migrate --package=cartalyst/sentry"
 * Open laramin at "localhost/laramin/public/user/login"
 
 ### Todos
@@ -41,10 +42,11 @@ Maybe later:
 Define you're Menu in app/routes.php
 
 ### Modules
-* Split you're Application in parts, they go in the app/modules/xy folder
+* Split you're Application in parts, they go in the app/modules/backend/xy or app/modules/frontend/xy folder
 * Add a module.json file, or copy it from an existing one
 * create a routes.php
 * create a folder "controllers" with YourController.php
+* use app/config/packages/creolab/ to change settings for this module stuff
 
 ### Views
 Normally Views are in app/views but because i thing almost everyone should have a cool
