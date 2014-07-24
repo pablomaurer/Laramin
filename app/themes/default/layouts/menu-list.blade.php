@@ -10,7 +10,7 @@
 @if($item->hasChildren())
 <ul class="dropdown-menu">
 
-    {{{-- REVERSE --}}
+    {{-- REVERSE --}}
     @include('layouts.menu-list', array('items' => $item->children()))
 
 </ul>

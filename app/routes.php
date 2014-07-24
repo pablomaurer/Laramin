@@ -34,8 +34,7 @@ Menu::make('mainNav', function($menu){
     $user->add(trans('menu.groups'), 'groups');
     $user->add(trans('menu.permissions'), 'permission');
 
-    $menu->add('services', 'services');
-    $menu->add('Contact','contact');
+    $menu->add('Tabellen', 'services');
 });
 
 
@@ -44,7 +43,7 @@ Menu::make('loginNav', function($menu){
         $user = Sentry::getUser();
 
         $menu->add(trans('login.logout'), array('route' => 'logout'));
-        $menu->add($user->email, 'services');
+        $menu->add($user->email, 'profile');
     }
     else
     {

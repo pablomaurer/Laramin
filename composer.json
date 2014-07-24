@@ -23,7 +23,8 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php",
-            "app/modules"
+            "app/modules/backend",
+            "app/modules/frontend"
 		]
 	},
 	"scripts": {
