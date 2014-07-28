@@ -95,8 +95,11 @@ Never was easier, just add the HTML-Attributes you want for Validation just add 
 If you have stuff that should be available in all Views ... TODO
 
 # Todos
-[] Set Current Page
-[]
+[] Highlight Current Page
+[] Replace / route
+[] Add Clientside Validation to all Forms / now only Login has it.
+[] Look how to change Language
+
 
 # Images
 ![Laravel Starter Set Login Screen](/readme/img/login.png?raw=true "Login Screen")
