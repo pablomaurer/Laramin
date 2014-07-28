@@ -33,32 +33,14 @@ App::after(function($request, $response)
 |
 */
 
-Route::filter('auth', function()
+//http://laravelsnippets.com/snippets/sentry-route-filters#sthash.e3dQkdyy.dpuf
+Route::filter('loggedin', function()
 {
-	if (Auth::guest()) return Redirect::guest('login');
+    if ( ! Sentry::check()) {
+        return Redirect::route('login');
+    }
 });
 
-
-Route::filter('auth.basic', function()
-{
-	return Auth::basic();
-});
-
-/*
-|--------------------------------------------------------------------------
-| Guest Filter
-|--------------------------------------------------------------------------
-|
-| The "guest" filter is the counterpart of the authentication filters as
-| it simply checks that the current user is not logged in. A redirect
-| response will be issued if they are, which you may freely change.
-|
-*/
-
-Route::filter('guest', function()
-{
-	if (Auth::check()) return Redirect::to('/');
-});
 
 /*
 |--------------------------------------------------------------------------
