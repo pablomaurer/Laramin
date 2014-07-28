@@ -81,11 +81,11 @@ these are at a higher priority than at `app/views` but you dont have to use my t
 but if you do, it will just work.
 
 # Clientside Validation
-Never was easier, just add the HTML-Attributes you want for Validation
+Never was easier, just add the HTML-Attributes you want for Validation just add to yoou're input tag for example `data-bv-emailaddress="true"` and you're done.
 ```html
 <input type="email" id="email" name="email" class="form-control" placeholder="{{ trans('login.email') }}" required autofocus
     data-bv-emailaddress="true"
-    data-bv-stringlength="true"  <!-- Easy add just stuff like this -->
+    data-bv-stringlength="true"
     data-bv-stringlength-min="6"
     data-bv-stringlength-max="30"
 >
