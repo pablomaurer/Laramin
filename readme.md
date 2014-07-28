@@ -24,7 +24,7 @@ files.
 * Install Composer
 * Run Composer update
 * create new empty database in PhpMyAdmin or console "create database xy"
-* Setup Settings in laramin/app/config database.php and mail.php
+* Setup Settings in `laramin/app/config` database.php and mail.php
 * Run "php artisan mirgrate"
 * Run "php artisan migrate --package=cartalyst/sentry"
 * Open laramin at "localhost/laramin/public/user/login"
@@ -56,7 +56,7 @@ There are 4 Folders wich can contain modules, they are
 - app/modules/shared   // for Admins and Users
 - app/modules/public   // for Guests
 ```
-Split you're Application in modules inside these folders. For Example a **User CRUD** for the Admin goes in app/modules/backend/**user**
+Split you're Application in modules inside these folders. For Example a **User CRUD** for the Admin goes in `app/modules/backend/**user**`
 
 ##### Module Folder contains
 * module.json file copy a existing or create a new one.
@@ -64,7 +64,7 @@ Split you're Application in modules inside these folders. For Example a **User C
 * folder "controllers" with YourController.php
 
 ##### Modules advanced
-* use app/config/packages/creolab/ to change settings for this module stuff
+* use `app/config/packages/creolab/` to change settings for this module stuff
 
 ##### Workflow when adding a new Module
 1. Module Folder
@@ -75,9 +75,9 @@ Split you're Application in modules inside these folders. For Example a **User C
 6. View ->title etc..
 
 # Views
-Normally Views are in app/views but because i thing almost everyone should have a cool
-Templating system to easy switch out the Views they have to go in "app/themes/default/"
-these are at a higher priority than at "app/views" but you dont have to use my themes folder
+Normally Views are in `app/views` but because i thing almost everyone should have a cool
+Templating system to easy switch out the Views they have to go in `app/themes/default/`
+these are at a higher priority than at `app/views` but you dont have to use my themes folder
 but if you do, it will just work.
 
 # Widgets
