@@ -31,15 +31,16 @@ files.
 
 ## used Packages
 
-used:
-* [Sentry](https://github.com/cartalyst/sentry) -  Authenticatoin
-* [themify](https://github.com/mpedrera/themify) - managing Themes
-* [widget](https://github.com/gravitano/widget) -  making theme widgets
-* [laravel-modules](https://github.com/creolab/laravel-modules) - cleaner structure 
-* [laravel-menu](https://github.com/lavary/laravel-menu) - managing menus (great guy)
-* [Ardent](https://github.com/laravelbook/ardent) - validating
-* [todo](#) - IDE helper code completion
-* [notification](https://github.com/edvinaskrucas/notification) - notifications
+| Name                                              		 | Usage                |
+| -------------------------------------------------------------- |----------------------|
+| [Sentry](https://github.com/cartalyst/sentry)     		 | Authenticatoin       |
+| [themify](https://github.com/mpedrera/themify)		 | Managing Themes      | 
+| [widget](https://github.com/gravitano/widget)         	 | Theme Widgets 	|
+| [laravel-modules](https://github.com/creolab/laravel-modules)	 | Cleaner structure 	|
+| [laravel-menu](https://github.com/lavary/laravel-menu)	 | Managing menus	|
+| [Ardent](https://github.com/laravelbook/ardent)    		 | Validating		|
+| [todo](#)					     		 | IDE code completion	|
+| [notification](https://github.com/edvinaskrucas/notification)	 | Notifications	|
 
 Maybe later:
 * [presenter] (https://github.com/robclancy/presenter) - TODO
@@ -49,12 +50,13 @@ Define you're Menu in app/routes.php
 
 # Modules
 There are 4 Folders wich can contain modules, they are
-* app/modules/backend - modules for managers
-* app/modules/frontend - modules for logged in users
-* app/modules/shared - modules for managers and logged in users
-* app/modules/public - modules for guests
-
-Split you're Application in modules inside these folders.
+```
+- app/modules/backend  // for Admins
+- app/modules/frontend // for registered Users
+- app/modules/shared   // for Admins and Users
+- app/modules/public   // for Guests
+```
+Split you're Application in modules inside these folders. For Example a **User CRUD** for the Admin goes in app/modules/backend/**user**
 
 ##### Module Folder contains
 * module.json file copy a existing or create a new one.
@@ -64,12 +66,13 @@ Split you're Application in modules inside these folders.
 ##### Modules advanced
 * use app/config/packages/creolab/ to change settings for this module stuff
 
-##### Most new Stuff you do will need
-1.model
-2.controller
-4.route
-5.menu
-6.view ->title etc..
+##### Workflow when adding a new Module
+1. Module Folder
+2. Model
+3. Controller
+4. Route
+5. Menu
+6. View ->title etc..
 
 # Views
 Normally Views are in app/views but because i thing almost everyone should have a cool
