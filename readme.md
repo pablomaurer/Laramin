@@ -11,13 +11,7 @@
 - [Images](#user-content-images)
 
 # Laramin
-A Laravel starter Set Backend and Frontend (No Package)
-
-Cause i didnt knew how to work clean with Laravel, i found my own way
-with the help of some packages.
-
-Now you can develop easy, clear and you will ever know where you which
-files.
+A Laravel starter Set Backend and Frontend based on Bootstrap. I didnt knew how to work clean with Laravel, so I found my own way with the help of some packages. Now you can develop easy, clear and everybody will ever know what goes where..
 
 ## Installation
 * Git clone
@@ -84,7 +78,7 @@ but if you do, it will just work.
 If you have stuff that should be available in all Views ... TODO
 
 # Todos
-* Set Current Page
-* Create Filters
+[ ] Set Current Page
+[ ]  
 
 # Images
