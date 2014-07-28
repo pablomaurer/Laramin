@@ -1,3 +1,15 @@
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Laramin](#user-content-laramin)
+	- [Installation](#user-content-installation)
+	- [used Packages](#user-content-used-packages)
+- [Menu](#user-content-menu)
+- [Modules](#user-content-modules)
+- [Views](#user-content-views)
+- [Widgets](#user-content-widgets)
+- [Todos](#user-content-todos)
+- [Images](#user-content-images)
+
 # Laramin
 A Laravel starter Set Backend and Frontend (No Package)
 
