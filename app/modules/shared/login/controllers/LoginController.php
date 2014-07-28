@@ -8,7 +8,7 @@ class LoginController extends Controller {
         return View::make('modules.shared.login.login');
     }
 
-    public function postLogin() //todo add throttling?
+    public function postLogin() //todo throttling stuff
     {
         try
         {
@@ -18,7 +18,7 @@ class LoginController extends Controller {
             );
 
             $user = Sentry::authenticate($credentials, Input::get('remember'));
-            return Response::json(array('notification' => route("dashboard"))); //todo Prio Low: make as a setting
+            return Response::json(array('url' => route("dashboard"))); //todo Prio Low: make as a setting
         }
         catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
         {
@@ -43,6 +43,16 @@ class LoginController extends Controller {
         catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
         {
             Notification::danger('User is not activated.');
+            return Response::json(array('notification' => true));
+        }
+        catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e)
+        {
+            Notification::danger('User is suspended.');
+            return Response::json(array('notification' => true));
+        }
+        catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
+        {
+            Notification::danger('User is banned.');
             return Response::json(array('notification' => true));
         }
     }
