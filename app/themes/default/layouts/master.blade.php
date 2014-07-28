@@ -18,13 +18,13 @@
     </header>
 
     <!-- Content -->
-    <section>
+    <div class="container">
         <div id="msgBag">{{ Notification::showAll() }}</div>
         @yield('content')
-    </section>
+    </div>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         @include('layouts.footer')
     </footer>
 
