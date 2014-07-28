@@ -44,15 +44,15 @@ There are 4 Folders wich can contain modules, they are
 
 Split you're Application in modules inside these folders.
 
-## Module Folder contains
+### Module Folder contains
 * module.json file copy a existing or create a new one.
 * routes.php
 * folder "controllers" with YourController.php
 
-## Modules advanced
+### Modules advanced
 * use app/config/packages/creolab/ to change settings for this module stuff
 
-## Most new Stuff you do will need
+### Most new Stuff you do will need
 1.model
 2.controller
 4.route
