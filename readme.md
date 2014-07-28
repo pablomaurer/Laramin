@@ -13,6 +13,12 @@
 # Laramin
 A Laravel starter Set Backend and Frontend based on Bootstrap. I didnt knew how to work clean with Laravel, so I found my own way with the help of some packages. Now you can develop easy, clear and everybody will ever know what goes where..
 
+## Features
+* Clean structure with Modules, so everyone knows what goes where
+* Login, Password reset, Groups, Permission
+* Menu builder
+* Themes to overwrite default style
+
 ## Installation
 * Git clone
 * Install Composer
@@ -23,7 +29,7 @@ A Laravel starter Set Backend and Frontend based on Bootstrap. I didnt knew how 
 * Run "php artisan migrate --package=cartalyst/sentry"
 * Open laramin at "localhost/laramin/public/user/login"
 
-## used Packages
+## Used Packages
 
 | Name                                              		 | Usage                |
 | -------------------------------------------------------------- |----------------------|
