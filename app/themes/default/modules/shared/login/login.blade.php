@@ -15,7 +15,12 @@
                     <label for="mail">{{ trans('login.email') }}</label>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="{{ trans('login.email') }}" required autofocus>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="{{ trans('login.email') }}" required autofocus
+                            data-bv-emailaddress="true"
+                            data-bv-stringlength="true"
+                            data-bv-stringlength-min="6"
+                            data-bv-stringlength-max="15"
+                        >
                     </div>
                 </div>
 
@@ -23,12 +28,17 @@
                     <label for="password">{{ trans('login.password') }}</label>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input type="password" id="password" name="password" class="form-control" placeholder="{{ trans('login.password') }}" required>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="{{ trans('login.password') }}" required
+                               data-bv-notempty="true"
+                               data-bv-stringlength="true"
+                               data-bv-stringlength-min="6"
+                               data-bv-stringlength-max="15"
+                        >
                     </div>
-                    <label class="checkbox">
-                        <input type="checkbox" name="remember"> {{ trans('login.remember') }}
-                    </label>
                 </div>
+                <label class="checkbox">
+                    <input type="checkbox" name="remember"> {{ trans('login.remember') }}
+                </label>
 
                 <button type="submit" class="btn btn-primary">{{ trans('login.login') }}</button>
                 {{ trans('global.or') }} <a href="{{ route('register') }}">{{ trans('login.register') }}</a>
@@ -45,4 +55,13 @@
     </div>
 </div>
 </div>
+@stop
+
+@section('footerScripts')
+@parent
+<script>
+$(document).ready(function() {
+    $('#loginForm').bootstrapValidator();
+});
+</script>
 @stop
