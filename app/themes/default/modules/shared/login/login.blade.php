@@ -19,7 +19,7 @@
                             data-bv-emailaddress="true"
                             data-bv-stringlength="true"
                             data-bv-stringlength-min="6"
-                            data-bv-stringlength-max="15"
+                            data-bv-stringlength-max="30"
                         >
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                         <input type="password" id="password" name="password" class="form-control" placeholder="{{ trans('login.password') }}" required
                                data-bv-notempty="true"
                                data-bv-stringlength="true"
-                               data-bv-stringlength-min="6"
+                               data-bv-stringlength-min="3"
                                data-bv-stringlength-max="15"
                         >
                     </div>
