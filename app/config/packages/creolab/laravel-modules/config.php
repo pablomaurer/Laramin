@@ -9,6 +9,8 @@ return array(
     'path' => array(
         'app/modules/frontend',
         'app/modules/backend',
+        'app/modules/shared',
+        'app/modules/public',
     ),
 
 	/**

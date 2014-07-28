@@ -1,6 +1,12 @@
 ## Laramin
 A Laravel starter Set Backend and Frontend (No Package)
 
+Cause i didnt knew how to work clean with Laravel, i found my own way
+with the help of some packages.
+
+Now you can develop easy, clear and you will ever know where you which
+files.
+
 ### used Packages
 
 used:
@@ -16,7 +22,7 @@ used:
 Maybe later:
 * [presenter] (https://github.com/robclancy/presenter) - for TODO
 
-### usage
+### new modules may needs
 1.model
 2.controller
 4.route
@@ -34,7 +40,6 @@ Maybe later:
 * Open laramin at "localhost/laramin/public/user/login"
 
 ### Todos
-* Find a Ajax Notification Way
 * Set Current Page
 * Create Filters
 
@@ -42,10 +47,20 @@ Maybe later:
 Define you're Menu in app/routes.php
 
 ### Modules
-* Split you're Application in parts, they go in the app/modules/backend/xy or app/modules/frontend/xy folder
-* Add a module.json file, or copy it from an existing one
-* create a routes.php
-* create a folder "controllers" with YourController.php
+There are 4 Folders wich can contain modules, they are
+* app/modules/backend - modules for managers
+* app/modules/frontend - modules for logged in users
+* app/modules/shared - modules for managers and logged in users
+* app/modules/public - modules for guests
+
+Split you're Application in modules inside these folders.
+
+#### Module Folder contains
+* module.json file copy a existing or create a new one.
+* routes.php
+* folder "controllers" with YourController.php
+
+#### Modules advanced
 * use app/config/packages/creolab/ to change settings for this module stuff
 
 ### Views

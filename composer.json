@@ -24,7 +24,9 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php",
             "app/modules/backend",
-            "app/modules/frontend"
+            "app/modules/frontend",
+            "app/modules/shared",
+            "app/modules/public"
 		]
 	},
 	"scripts": {
