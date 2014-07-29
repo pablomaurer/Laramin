@@ -2,6 +2,19 @@
 
 /*
 |--------------------------------------------------------------------------
+| Language Detection
+|--------------------------------------------------------------------------
+|
+| Here we detect the Language settings of the Browser and use it to set the
+| Application language //todo improve
+|
+*/
+$browser_lang = substr(Request::server('HTTP_ACCEPT_LANGUAGE'), 0, 2);
+if ($browser_lang != null) {
+    App::setLocale($browser_lang);
+}
+/*
+|--------------------------------------------------------------------------
 | Global Application Routes
 |--------------------------------------------------------------------------
 |
@@ -16,6 +29,14 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Test stuff
+|--------------------------------------------------------------------------
+|
+| just if i wanna run a function onetime, todo remove this later..
+|
+*/
 /*
 //-------------------------------------------------
 // Todo Created in order to have a testgroup, make this stuff as option in admin section

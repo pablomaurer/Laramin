@@ -9,7 +9,9 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"></script>
-    {{ HTML::script('lib/js/bootstrapValidator-de_DE.js') }}
+    @if (App::getLocale() == 'de')
+        {{ HTML::script('lib/js/bootstrapValidator-de_DE.js') }}
+    @endif
 
     {{ HTML::script('lib/js/master.js') }}
     {{ HTML::style('lib/css/style.css') }}

@@ -97,10 +97,12 @@ Never was easier, just add the HTML-Attributes you want for Validation just add 
 If you have stuff that should be available in all Views ... TODO
 
 # Todos
-- [ ] Highlight Current Page
+- [X] Look how to change Language
+- [X] Highlight Current Page
+- [X] Imporve active menu filtering when issue closed [laravel-menu] (https://github.com/lavary/laravel-menu/issues/20)
+- [ ] Add Clientside Validation to all Forms / now only Login has it
 - [ ] Replace / route
-- [ ] Add Clientside Validation to all Forms / now only Login has it.
-- [ ] Look how to change Language
+- [ ] Improve Language detection
 
 
 # Images
