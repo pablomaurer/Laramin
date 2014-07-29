@@ -50,21 +50,22 @@ Maybe later:
 # Menu
 Define you're Menu in `app/menus.php`
 
-Add you're Menu Items
+Add you're Menu Items:
 ```php
 $userMenuItems = function($userMenu) {
     $userMenu->add(trans('menu.dashboard'), array('route'  => 'dashboard'));
     $userMenu->add('Products',              array('route'  => 'dashboard'));
 };
 ```
-In the if else `Sentry::check` block create the Menu instance
+Create the Menu Instance in the if else `Sentry::check` block:
 ```php
 $userMenu = Menu::make('mainNav', $userMenuItems);
 ```
-Add your Menu to the Array, cause this Array will be looped over, to add the active css class.
+Add your Menu to the Array, cause this Array will be looped over, to add the active css class:
 ```php
 $memberMenus = array($adminMenu, $userMenu, $logoutMenu)
 ```
+More information in the package description [laravel-menu](https://github.com/lavary/laravel-menu).
 # Modules
 There are 4 Folders wich can contain modules, they are
 ```
@@ -82,7 +83,7 @@ Split you're Application in modules inside these folders. For Example a **User C
 
 ##### Modules advanced
 * use `app/config/packages/creolab/` to change settings for this module stuff
-
+* More information in the package description [laravel-modules](https://github.com/creolab/laravel-modules)
 ##### Workflow when adding a new Module
 1. Module Folder
 2. Model
@@ -97,6 +98,8 @@ Templating system to easy switch out the Views they have to go in `app/themes/de
 these are at a higher priority than at `app/views` but you dont have to use my themes folder
 but if you do, it will just work.
 
+More information in the package description [themify](https://github.com/mpedrera/themify)
+
 # Clientside Validation
 Never was easier, just add the HTML-Attributes you want for Validation just add to yoou're input tag for example `data-bv-emailaddress="true"` and you're done.
 ```html
@@ -107,6 +110,7 @@ Never was easier, just add the HTML-Attributes you want for Validation just add 
     data-bv-stringlength-max="30"
 >
 ```
+More Information on [Bootstrapvalidator](http://bootstrapvalidator.com/)
 
 # Widgets
 If you have stuff that should be available in all Views ... TODO
@@ -119,6 +123,9 @@ If you have stuff that should be available in all Views ... TODO
 - [ ] Replace / route
 - [ ] Improve Language detection
 - [ ] Notification also when success not only on errors
+- [ ] CRUD User, Groups, Permissions
+- [ ] Find easy to use statistic Package / Plugin
+- [ ] read [vegibit] (http://vegibit.com/)
 
 
 # Images
