@@ -14,8 +14,10 @@
 A Laravel starter Set Backend and Frontend based on [Bootstrap 3](http://getbootstrap.com/) and clientside [Bootstrapvalidator](http://bootstrapvalidator.com/). I didnt knew how to work clean with Laravel, so I found my own way with the help of some packages. Now you can develop easy, clear and everybody will ever know what goes where..
 
 ## Features
+* Default Theme on Bootstrap with easiest Client-side Validator
 * Clean structure with Modules, so everyone knows what goes where
 * Login, Password reset, Groups, Permission
+* Login Activation Mail, Password Reset Mail
 * Menu builder
 * Themes to overwrite default style
 
@@ -25,9 +27,9 @@ A Laravel starter Set Backend and Frontend based on [Bootstrap 3](http://getboot
 * Run Composer update
 * create new empty database in PhpMyAdmin or console "create database xy"
 * Setup Settings in `laramin/app/config` database.php and mail.php
-* Run "php artisan mirgrate"
-* Run "php artisan migrate --package=cartalyst/sentry"
-* Open laramin at "localhost/laramin/public/user/login"
+* Run `php artisan mirgrate`
+* Run `php artisan migrate --package=cartalyst/sentry`
+* Open laramin at `localhost/laramin/public/user/login`
 
 ## Used Packages
 
@@ -46,7 +48,7 @@ Maybe later:
 * [presenter] (https://github.com/robclancy/presenter) - TODO
 
 # Menu
-Define you're Menu in app/routes.php
+Define you're Menu in `app/menus.php`
 
 # Modules
 There are 4 Folders wich can contain modules, they are
@@ -95,10 +97,10 @@ Never was easier, just add the HTML-Attributes you want for Validation just add 
 If you have stuff that should be available in all Views ... TODO
 
 # Todos
-[] Highlight Current Page
-[] Replace / route
-[] Add Clientside Validation to all Forms / now only Login has it.
-[] Look how to change Language
+[x] Highlight Current Page
+[ ] Replace / route
+[ ] Add Clientside Validation to all Forms / now only Login has it.
+[ ] Look how to change Language
 
 
 # Images

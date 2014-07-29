@@ -2,10 +2,10 @@
 
 /*
 |--------------------------------------------------------------------------
-| Menu
+| Define Menu-Items
 |--------------------------------------------------------------------------
 |
-| Define here your Menus! see: https://github.com/lavary/laravel-menu
+| Define your Menu-Items here! see: https://github.com/lavary/laravel-menu
 | Track: https://github.com/lavary/laravel-menu/issues?page=1&state=open
 | Filter: You could Filter each Menulink (like loginNav Menu), but i
 | think it's easier to swap the whole menu depending on his Group
@@ -38,6 +38,16 @@ $loginMenuItems = function($loginMenu) {
     $loginMenu->add(trans('login.register'), array('route'  => 'register'));
 };
 
+/*
+|--------------------------------------------------------------------------
+| Create Menus
+|--------------------------------------------------------------------------
+|
+| Here we create our Menu Instances, and filter them.
+| filtering can get improved when this gets solved:
+| https://github.com/lavary/laravel-menu/issues/20
+|
+*/
 // If user is logged in
 if (Sentry::check())
 {
