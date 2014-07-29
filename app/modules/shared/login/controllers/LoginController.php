@@ -60,6 +60,7 @@ class LoginController extends Controller {
     // Logout
     public function getLogout()
     {
+        Notification::success('You are logged out, successfully');
         Sentry::logout();
         return Redirect::route('login'); //todo Prio Low: redirect to public home
     }

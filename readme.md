@@ -103,6 +103,7 @@ If you have stuff that should be available in all Views ... TODO
 - [ ] Add Clientside Validation to all Forms / now only Login has it
 - [ ] Replace / route
 - [ ] Improve Language detection
+- [ ] Notification also when success not only on errors
 
 
 # Images

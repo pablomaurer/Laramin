@@ -34,10 +34,19 @@ App::after(function($request, $response)
 */
 
 //http://laravelsnippets.com/snippets/sentry-route-filters#sthash.e3dQkdyy.dpuf
-Route::filter('loggedin', function()
+Route::filter('loggedIn', function()
 {
-    if ( ! Sentry::check()) {
+    if (!Sentry::check()) {
+        Notification::danger('you have to login.');
         return Redirect::route('login');
+    }
+});
+
+Route::filter('loggedOut', function()
+{
+    if (Sentry::check()) {
+        Notification::danger('you are already logged in.');
+        return Redirect::route('dashboard');
     }
 });
 

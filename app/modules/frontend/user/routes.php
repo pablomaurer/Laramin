@@ -1,7 +1,7 @@
 <?php
 
-// only logged in users, can see this
-Route::group(array('before' => 'loggedin'), function()
+// only MEMBERS, can access this routes
+Route::group(array('before' => 'loggedIn'), function()
 {
     // Dashboard
     Route::get('user/dashboard', array('as' => 'dashboard', 'uses' => 'UserController@getDashboard'));

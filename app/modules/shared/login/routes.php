@@ -2,14 +2,22 @@
 
 // todo Prio low: quicker way to make routes? with rest or so..
 
-// Login
-Route::get('user/login', array('as' => 'login', 'uses' => 'LoginController@getLogin'));
-Route::post('user/login', array('as' => 'login', 'uses' => 'LoginController@postLogin'));
+// only GUESTS, can access this routes
+Route::group(array('before' => 'loggedOut'), function()
+{
+    // Login
+    Route::get('user/login', array('as' => 'login', 'uses' => 'LoginController@getLogin'));
+    Route::post('user/login', array('as' => 'login', 'uses' => 'LoginController@postLogin'));
+});
 
-// Logout
-Route::get('user/logout', array('as' => 'logout', 'uses' => 'LoginController@getLogout'));
+// only MEMBERS, can access this routes
+Route::group(array('before' => 'loggedIn'), function()
+{
+    // Logout
+    Route::get('user/logout', array('as' => 'logout', 'uses' => 'LoginController@getLogout'));
+});
 
-// Reset
+// PW Reset
 Route::get('user/reset', array('as' => 'reset', 'uses' => 'LoginController@getResetCode'));
 Route::post('user/reset', array('as' => 'reset', 'uses' => 'LoginController@postResetCode'));
 
