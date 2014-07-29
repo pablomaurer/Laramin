@@ -23,7 +23,11 @@
             <!-- Menu Right -->
             <ul class="nav navbar-nav navbar-right">
                 <li id="loadingImg"><img id="s" style=" float: right; padding-top: 15px; padding-bottom: 15px;" src="{{ URL::asset("lib/img/ajax-loader.gif") }}" /></li>
-                @include('layouts.menu-list', array('items' => $loginNav->roots()))
+                @if (Sentry::check())
+                    @include('layouts.menu-list', array('items' => $logoutNav->roots()))
+                @else
+                    @include('layouts.menu-list', array('items' => $loginNav->roots()))
+                @endif
             </ul>
 
         </div><!-- /.navbar-collapse -->
