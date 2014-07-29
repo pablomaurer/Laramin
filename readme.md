@@ -50,6 +50,21 @@ Maybe later:
 # Menu
 Define you're Menu in `app/menus.php`
 
+Add you're Menu Items
+```php
+$userMenuItems = function($userMenu) {
+    $userMenu->add(trans('menu.dashboard'), array('route'  => 'dashboard'));
+    $userMenu->add('Products',              array('route'  => 'dashboard'));
+};
+```
+In the if else `Sentry::check` block create the Menu instance
+```php
+$userMenu = Menu::make('mainNav', $userMenuItems);
+```
+Add your Menu to the Array, cause this Array will be looped over, to add the active css class.
+```php
+$memberMenus = array($adminMenu, $userMenu, $logoutMenu)
+```
 # Modules
 There are 4 Folders wich can contain modules, they are
 ```
