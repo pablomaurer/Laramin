@@ -10,4 +10,4 @@ Route::group(array('before' => 'loggedOut'), function()
     //Confirm
     Route::get('user/confirm', array('as' => 'confirm', 'uses' => 'RegisterController@getConfirm'));
     Route::post('user/confirm', array('as' => 'confirm', 'uses' => 'RegisterController@postConfirm'));
-}); //v
+}); //vf
