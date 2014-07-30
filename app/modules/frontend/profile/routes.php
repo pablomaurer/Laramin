@@ -4,5 +4,5 @@
 Route::group(array('before' => 'loggedIn'), function()
 {
     // Dashboard
-    Route::get('user/dashboard', array('as' => 'dashboard', 'uses' => 'UserController@getDashboard'));
+    Route::get('profile/dashboard', array('as' => 'dashboard', 'uses' => 'ProfileController@getDashboard'));
 });
