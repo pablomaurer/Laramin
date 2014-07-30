@@ -116,6 +116,7 @@ More Information on [Bootstrapvalidator](http://bootstrapvalidator.com/)
 If you have stuff that should be available in all Views ... TODO
 
 # Todos
+- [X] read [vegibit] (http://vegibit.com/)
 - [X] Look how to change Language
 - [X] Highlight Current Page
 - [X] Imporve active menu filtering when issue closed [laravel-menu] (https://github.com/lavary/laravel-menu/issues/20)
@@ -125,7 +126,13 @@ If you have stuff that should be available in all Views ... TODO
 - [ ] Notification also when success not only on errors
 - [ ] CRUD User, Groups, Permissions
 - [ ] Find easy to use statistic Package / Plugin
-- [ ] read [vegibit] (http://vegibit.com/)
+- [ ] Member can change password or mail-adress
+- [ ] Menu management in backend
+- [ ] Translate easy in backend
+- [ ] Create Artisan Command to create a Admin
+- [ ] Create Settings Module with - Block user on X login attempts
+- [ ] Use compact() in menus.php
+- [ ] Move extended Sentry user Model, to Module folder
 
 
 # Images
