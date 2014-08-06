@@ -132,7 +132,7 @@ If you have stuff that should be available in all Views ... TODO
 - [ ] Create Artisan Command to create a Admin
 - [ ] Create Settings Module with - Block user on X login attempts
 - [ ] Use compact() in menus.php
-- [ ] Move extended Sentry user Model, to Module folder d
+- [ ] Move extended Sentry user Model, to Module folder
 
 
 # Images
