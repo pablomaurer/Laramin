@@ -43,10 +43,9 @@ $loginMenuItems = function($loginMenu) {
 | Create Menus
 |--------------------------------------------------------------------------
 |
-| Here we create our Menu Instances, and filter them.
-| filtering can get improved when this gets solved:
-| https://github.com/lavary/laravel-menu/issues/20
-|
+| Here we create our Menu Instances. And first do a Sentry Check so we
+| can show different Menus if the user is logged in. Or better in what
+| group the User is.
 */
 // If user is logged in
 if (Sentry::check())
@@ -65,10 +64,6 @@ if (Sentry::check())
         $logoutMenu->add($user->email, array('route' => 'logout'));
     };
 
-    $adminMenu = null;
-    $userMenu = null;
-    $logoutMenu = null;
-
     // Menu if User is in Admin Group
     $adminGroup = Sentry::findGroupByName('Admin');
     if ($user->inGroup($adminGroup)) {
@@ -83,32 +78,8 @@ if (Sentry::check())
 
     // Menu if User is logged in (items are here because need of username)
     $logoutMenu = Menu::make('logoutNav', $logoutMenuItems);
-
-    // mark member menus as active
-    $memberMenus = array($adminMenu, $userMenu, $logoutMenu);
-    foreach ($memberMenus as &$menus) {
-        if($menus != null) {
-            $menus->filter(function($item) {
-                if(route($item->link->path['route']) == Request::url()) {
-                    $item->active();
-                }
-                return true;
-            });
-        }
-    }
 } else {
     // create guests menus
     $guestMenu = Menu::make('mainNav', $guestMenuItems);
     $loginMenu = Menu::make('loginNav', $loginMenuItems);
-
-    // mark guest menus as active
-    $guestMenus = array($guestMenu, $loginMenu);
-    foreach ($guestMenus as &$menus) {
-        $menus->filter(function($item) {
-            if(route($item->link->path['route']) == Request::url()) {
-                $item->active();
-            }
-            return true;
-        });
-    }
 }
