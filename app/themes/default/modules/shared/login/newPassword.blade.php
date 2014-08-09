@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', 'Set new password')
 
 @section('content')
 <p>This is my body content. i'm in reset.blade.php</p>

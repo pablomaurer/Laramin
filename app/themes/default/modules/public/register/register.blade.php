@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', 'Register')
 
 @section('content')
 <p>This is my body content. i'm in Register.php</p>

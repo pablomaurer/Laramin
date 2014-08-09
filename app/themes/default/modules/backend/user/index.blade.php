@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', 'Manage Users')
 
 @section('content')
 <div class="row col-md-6 col-md-offset-2 custyle"> {{-- start table --}}

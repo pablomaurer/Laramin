@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <title>@yield('title') - Laramin</title>
     @section('head')
     <!-- Bootstrap, Bootstrap validator styles -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"/>

@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', 'Confirm Reset Code')
 
 @section('content')
 <script>

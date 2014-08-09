@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title', 'Confirm Activation Code')
 
 @section('content')
 <script>

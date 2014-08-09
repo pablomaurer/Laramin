@@ -122,7 +122,7 @@ If you have stuff that should be available in all Views ... TODO
 - [X] Imporve active menu filtering when issue closed [laravel-menu] (https://github.com/lavary/laravel-menu/issues/20)
 - [X] Have a new branch where you can test features
 - [X] Make a help [gist](https://gist.github.com/mnewmedia/e3ffa2ea88e5de050363) for working with git.
-- [ ] Find a way to define the title for the pages..
+- [X] Find a way to define the title for the pages..
 - [ ] Add Clientside Validation to all Forms / now only Login has it
 - [ ] Replace / route
 - [ ] Improve Language detection
